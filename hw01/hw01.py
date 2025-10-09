@@ -51,6 +51,13 @@ def largest_factor(n):
     1
     """
     "*** YOUR CODE HERE ***"
+    num = 1
+    while num < n:
+        if n % num == 0:
+            factor = num
+        num += 1
+    return factor
+
 
 
 def if_function(condition, true_result, false_result):
@@ -96,12 +103,15 @@ def with_if_function():
 
 def cond():
     "*** YOUR CODE HERE ***"
+    return True
 
 def true_func():
     "*** YOUR CODE HERE ***"
+    print(42)
 
 def false_func():
     "*** YOUR CODE HERE ***"
+    print(47)
 
 
 def hailstone(n):
@@ -120,4 +130,17 @@ def hailstone(n):
     7
     """
     "*** YOUR CODE HERE ***"
+    count = 0
+    while n != 1:
+        if n % 2 == 0:
+            print(n)
+            n = n // 2
+            count += 1
+        else:
+            print(n)
+            n = n * 3 + 1
+            count += 1
+    print(1)
+    return count + 1
+
 
